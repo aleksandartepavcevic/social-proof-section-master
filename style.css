@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Spartan', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.background-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40.6%;
+    z-index: -1;
+}
+
+.background-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 75.34%;
+    z-index: -1;
+}
+
+main {
+    height: calc(100vh - 20rem);
+    margin-top: 10rem;
+    margin-left: 16.5rem;
+    margin-right: 16.5rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "main-text main-ratings" 
+    "main-container-card main-container-card";
+}
+
+.main-text {
+    grid-area: main-text;
+    margin-top: 2.8rem;
+}
+
+.main-text h1 {
+    font-size: 4rem;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    letter-spacing: -0.1rem;
+}
+
+.main-text p {
+    font-size: 1.4rem;
+    margin-top: 1.4rem;
+    color: hsl(303, 10%, 53%);
+}
+
+.main-container-card {
+    grid-area: main-container-card;
+}
+
+.main-ratings {
+    grid-area: main-ratings;
+    margin-top: 2.8rem;
+}
+
+.main-ratings-first {
+    background-color: hsl(300, 24%, 96%);
+    width: 44.5rem;
+    height: 5.6rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.main-ratings-text {
+    padding-top: 0.5rem;
+    margin-left: 3.3rem;
+    font-size: 1.2rem;
+    color: hsl(300, 43%, 22%);;
+}
+
+.main-ratings-stars {
+    margin-left: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 11.7rem;
+}
+
+.main-ratings-second {
+    background-color: hsl(300, 24%, 96%);
+    width: 44.5rem;
+    height: 5.6rem;
+    border-radius: 1rem;
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.main-ratings-third {
+    background-color: hsl(300, 24%, 96%);
+    width: 44.5rem;
+    height: 5.6rem;
+    border-radius: 1rem;
+    
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.main-container-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-card-first {
+    background-color:hsl(300, 43%, 22%);
+    width: 35rem;
+    height: 23.4rem;
+    border-radius: 1rem;
+    margin-right: 3rem;
+    display: flex;
+}
+
+.main-card-second {
+    background-color:hsl(300, 43%, 22%);
+    width: 35rem;
+    height: 23.4rem;
+    border-radius: 1rem;
+    margin-right: 3rem;
+    margin-top: 1.6rem;
+    display: flex;
+}
+
+.main-card-third {
+    background-color:hsl(300, 43%, 22%);
+    width: 35rem;
+    height: 23.4rem;
+    border-radius: 1rem;
+    margin-top: 3.2rem;
+    display: flex;
+}
+
+.main-card-container {
+    width: 80.6%;
+    height: 64.1%;
+    margin: auto;
+}
+
+.main-card-avatar {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    /* margin-top: 4rem;
+    margin-left: 3.2rem; */
+    float: left;
+}
+
+.main-card-name {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 0.3rem;
+    margin-left: 6.4rem;
+}
+
+.main-card-verification {
+    font-size: 1.2rem;
+    color: hsl(333, 80%, 67%);
+    margin-top: 0.9rem;
+    margin-left: 6.4rem;
+}
+
+.main-card-quote {
+    font-size: 1.2rem;
+    color: hsl(300, 24%, 96%); 
+    line-height: 2.3rem;
+    margin-top: 3.5rem;
+}
+
+@media screen and (max-width: 1150px) {
+    main {
+        grid-template-columns: 100%;
+        grid-template-areas: "main-text" "main-ratings" "main-container-card";
+    }
+
+    .wrapper {
+        overflow: visible;
+    }
+
+}
